@@ -5,10 +5,13 @@ import (
 	"unicode"
 )
 
+// New type for checking letter is vowel
 type Vowels []rune
 
+// All vowels
 var vowels = Vowels{'a', 'e', 'i', 'o', 'u'}
 
+// The method for checkin; like 'in' in python
 func (v Vowels) Has(a rune) bool {
 	for _, b := range v {
 		if b == a {
@@ -18,6 +21,7 @@ func (v Vowels) Has(a rune) bool {
 	return false
 }
 
+// Iterative function for counting of consonants
 func iterativeCountConsonants(inputStr string) int {
 	str := []rune(inputStr)
 	conCount := 0
@@ -29,6 +33,7 @@ func iterativeCountConsonants(inputStr string) int {
 	return conCount
 }
 
+// Recursive function for counting of consonants
 func recursiveCountConsonants(inputStr string) int {
 	if inputStr == "" {
 		return 0
@@ -43,6 +48,7 @@ func recursiveCountConsonants(inputStr string) int {
 	}
 }
 
+// Testing
 func main() {
 	inputStr := "Lekan"
 	fmt.Println(inputStr)
